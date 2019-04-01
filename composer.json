@@ -1,16 +1,16 @@
 {
   "name": "rockbuzz/lara-https",
-  "description": "",
+  "description": "Configure https when needed.",
   "keywords": [],
   "license": "MIT",
   "authors": [
     {
       "name": "TiagoDevWeb",
-      "email": "tiago.desenvolvedorweb@gmail.com"
+      "email": "tiago@rockbuzz.com.br"
     },
     {
       "name": "Paulo Henrique P. Scheuermann",
-      "email": "paetzold44@gmail.com"
+      "email": "paulo@rockbuzz.com.br"
     }
   ],
   "autoload": {
