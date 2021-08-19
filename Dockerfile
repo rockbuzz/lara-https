@@ -1,11 +1,9 @@
-FROM phpdockerio/php72-fpm:latest
+FROM php:7.2-fpm-alpine
 
-ARG DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get -y update \
-    && apt-get -y --no-install-recommends install php7.2-sqlite3 \
-    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+RUN apk add --no-cache $PHPIZE_DEPS bash
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
+
+ENTRYPOINT ["php-fpm"]
